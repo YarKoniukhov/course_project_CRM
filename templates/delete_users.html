@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Удаление пользователя с Telegram</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите номер пользователя которого надо удалить</p>
+<form>
+    <input type = "text" placeholder = "№ пользователя" name = "users">
+    <input type = "submit" value = "Выбрать">
+</form>
+<a href="{{ url_for('del_users', users=1) }}"></a>
+{% endblock %}

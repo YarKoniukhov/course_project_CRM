@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Редактирование пользователя с Telegram</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите номер пользователя telegram для изменений</p>
+<form method="POST">
+    <input type = "text" placeholder = "№ пользователя" name = "users">
+    <input type = "submit" value = "Выбрать">
+</form>
+<a href="{{ url_for('change_user', users=1) }}"></a>
+{% endblock %}

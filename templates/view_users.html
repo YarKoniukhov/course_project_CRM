@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Таблица пользователей Telegram</title>
+
+{% endblock %}
+
+{% block content %}
+<h1>Таблица пользователей Telegram</h1>
+  <table border="1">
+   <tr>
+    <th> ИД пользователя </th>
+    <th> Имя пользователя </th>
+    <th> ИД чат </th>
+    <th> Сообщение </th>
+       <th> Дата </th>
+   </tr>
+   {% for param in params %}
+   <tr><td>{{ param["user_id"] }}</td><td>{{ param["user_name"] }}</td><td>{{ param["chat_id"] }}</td>
+       <td>{{ param["message"] }}</td><td>{{ param["create_dt"] }}</td></tr>
+   {% endfor %}
+  </table>
+{% endblock %}

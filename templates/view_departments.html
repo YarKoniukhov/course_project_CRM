@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Table departments</title>
+
+{% endblock %}
+
+{% block content %}
+<h1>Таблица департаментов</h1>
+  <table border="1">
+   <tr>
+    <th> Department id </th>
+    <th> Department name </th>
+   </tr>
+   {% for param in params %}
+
+   <tr><td>{{ param["department_id"] }}</td><td>{{ param["department_name"] }}</td></tr>
+   {% endfor %}
+
+  </table>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Таблица заявок</title>
+
+{% endblock %}
+
+{% block content %}
+<h1>Таблица заявок</h1>
+  <table border="1">
+   <tr>
+    <th> № заявки </th>
+    <th> Дата создания </th>
+    <th> Дата обновления </th>
+    <th> Тип заявки </th>
+    <th> Описание </th>
+    <th> Статус заявки </th>
+       <th> Серийный номер </th>
+   </tr>
+   {% for param in params %}
+   <tr><td>{{ param["order_id"] }}</td><td>{{ param["created_dt"] }}</td><td>{{ param["updated_dt"] }}</td>
+       <td>{{ param["order_type"] }}</td><td>{{ param["description"] }}</td><td>{{ param["status"] }}</td>
+       <td>{{ param["serial_no"] }}</td></tr>
+   {% endfor %}
+  </table>
+{% endblock %}

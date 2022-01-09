@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Редактирование клиента</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите новые данные</p>
+<form method="POST">
+        <p>ИД клиента : {{ customers.customer_id }}</p>
+        <input  type="text" name="fio" value="{{ customers.fio }}"><br>
+        <input  type="text" name="number_phone" value="{{ customers.number_phone }}"><br>
+        <input  type="text" name="email" value="{{ customers.email }}"><br>
+        <input  type="text" name="is_subscribed" value="{{ customers.is_subscribed }}"><br>
+        <input  type="submit" value="Редактировать">
+</form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Выберите период</title>
+{% endblock %}
+
+{% block content %}
+<p>Выберите период</p>
+<form method="POST">
+    <input type = "text" placeholder = "Период с ГГГГ-ММ-ДД" name = "date_start">
+    <input type = "text" placeholder = "Период по ГГГГ-ММ-ДД" name = "date_end">
+    <input type = "submit" value = "Выбрать">
+</form>
+<a href="{{ url_for('get_order_date', date_start=1, date_end=1)}}"></a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Удаление сотрудника</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите номер сотрудника которого надо удалить</p>
+<form>
+    <input type = "text" placeholder = "№ сотрудника" name = "empl">
+    <input type = "submit" value = "Выбрать">
+</form>
+<a href="{{ url_for('del_employees', empl=1) }}"></a>
+{% endblock %}

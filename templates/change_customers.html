@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Редактирование клиента</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите номер клиента для изменений</p>
+<form method="POST">
+    <input type = "text" placeholder = "№ клиента" name = "cus">
+    <input type = "submit" value = "Выбрать">
+</form>
+<a href="{{ url_for('change_cus', cus=1) }}"></a>
+{% endblock %}

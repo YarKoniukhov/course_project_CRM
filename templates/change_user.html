@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Редактирование пользователя с telegram</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите новые данные</p>
+<form method="POST">
+        <p>ИД пользователя : {{ users.user_id }}</p>
+        <input  type="text" name="user_name" value="{{ users.user_name }}"><br>
+        <input  type="text" name="chat_id" value="{{ users.chat_id }}"><br>
+        <input  type="text" name="message" value="{{ users.message }}"><br>
+        <input  type="submit" value="Редактировать">
+</form>
+{% endblock %}

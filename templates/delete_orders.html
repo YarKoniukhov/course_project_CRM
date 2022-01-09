@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Удаление заявки</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите номер заявки которую хотите удалить</p>
+<form>
+    <input type = "text" placeholder = "№ заявки" name = "order">
+    <input type = "submit" value = "Выбрать">
+</form>
+<a href="{{ url_for('del_orders', order=1) }}"></a>
+{% endblock %}

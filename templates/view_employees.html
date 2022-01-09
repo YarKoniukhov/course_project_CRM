@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Table employees</title>
+
+{% endblock %}
+
+{% block content %}
+<h1>Таблица сотрудников</h1>
+  <table border="1">
+   <tr>
+    <th> № сотрудника </th>
+    <th> ФИО </th>
+    <th> Должность </th>
+    <th> № департамента </th>
+   </tr>
+   {% for param in params %}
+
+   <tr><td>{{ param["employees_id"] }}</td><td>{{ param["fio"] }}</td><td>{{ param["position"] }}</td>
+    <td>{{ param["department_id"] }}</td></tr>
+   {% endfor %}
+
+  </table>
+{% endblock %}

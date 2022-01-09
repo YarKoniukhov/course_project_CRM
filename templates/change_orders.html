@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Редактирование заявки</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите номер заявки для изменений</p>
+<form method="POST">
+    <input type = "text" placeholder = "№ заявки" name = "order">
+    <input type = "submit" value = "Выбрать">
+</form>
+<a href="{{ url_for('change_ord', order=1) }}"></a>
+{% endblock %}

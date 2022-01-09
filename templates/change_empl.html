@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Редактирование сотрудника</title>
+{% endblock %}
+
+{% block content %}
+<p>Введите новые данные</p>
+<form method="POST">
+        <p>ИД сотрудника : {{ employees.employees_id }}</p>
+        <input  type="text" name="fio" value="{{ employees.fio }}"><br>
+        <input  type="text" name="position" value="{{ employees.position }}"><br>
+        <input  type="text" name="department_id" value="{{ employees.department_id }}"><br>
+        <input  type="submit" value="Редактировать">
+</form>
+{% endblock %}
